@@ -2,6 +2,14 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "dbms.h"
+#include <QHBoxLayout>
+#include <QVBoxLayout>
+#include <QPushButton>
+#include <QLabel>
+#include <QDateTime>
+#include <QCheckBox>
+
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -17,7 +25,12 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+private slots:
+    void on_addTaskButton_clicked();
+
 private:
     Ui::MainWindow *ui;
+    dbms *databaseManager;
+
 };
 #endif // MAINWINDOW_H
