@@ -1,0 +1,25 @@
+# ninja log v5
+2780	3230	1727452005713352374	ToDo	f1a5f72e5feddc19
+300	2024	1727198440356361874	CMakeFiles/ToDo.dir/main.cpp.o	a9e026a5a69614f0
+470	2812	1727446285174191996	CMakeFiles/ToDo.dir/ToDo_autogen/mocs_compilation.cpp.o	a038dcc04bb17bb2
+301	2056	1727198440388345875	CMakeFiles/ToDo.dir/mainwindow.cpp.o	eb4ca8bf5f7c1fd7
+2	22	1727452002401411021	/home/krishna/Desktop/ToDo/build/kitty-Debug/ToDo_autogen/mocs_compilation.cpp	e91739e0766f553d
+2	300	1727368341557117693	build.ninja	57545b1490cf7acd
+2	22	1727452002401411021	/home/krishna/Desktop/ToDo/build/kitty-Debug/ToDo_autogen/timestamp	e91739e0766f553d
+24	2780	1727452005265360177	CMakeFiles/ToDo.dir/src/mainwindow.cpp.o	6e4fb43291859382
+2	22	1727452002401411021	ToDo_autogen/mocs_compilation.cpp	e91739e0766f553d
+2	22	1727452002401411021	ToDo_autogen/timestamp	e91739e0766f553d
+19	1704	1727447083698477786	CMakeFiles/ToDo.dir/src/dbms.cpp.o	7a3b29bda04ea5c4
+470	2960	1727446285322195718	CMakeFiles/ToDo.dir/src/main.cpp.o	1165e830f5bc39c4
+3	20	1727452622638168745	ToDo_autogen/timestamp	e91739e0766f553d
+3	20	1727452622638168745	ToDo_autogen/mocs_compilation.cpp	e91739e0766f553d
+3	20	1727452622638168745	/home/krishna/Desktop/ToDo/build/kitty-Debug/ToDo_autogen/timestamp	e91739e0766f553d
+3	20	1727452622638168745	/home/krishna/Desktop/ToDo/build/kitty-Debug/ToDo_autogen/mocs_compilation.cpp	e91739e0766f553d
+22	2859	1727452625974265315	CMakeFiles/ToDo.dir/src/mainwindow.cpp.o	6e4fb43291859382
+2859	3289	1727452626402277720	ToDo	f1a5f72e5feddc19
+3	27	1727453494339333415	ToDo_autogen/timestamp	e91739e0766f553d
+3	27	1727453494339333415	ToDo_autogen/mocs_compilation.cpp	e91739e0766f553d
+3	27	1727453494339333415	/home/krishna/Desktop/ToDo/build/kitty-Debug/ToDo_autogen/timestamp	e91739e0766f553d
+3	27	1727453494339333415	/home/krishna/Desktop/ToDo/build/kitty-Debug/ToDo_autogen/mocs_compilation.cpp	e91739e0766f553d
+30	2808	1727453497563349575	CMakeFiles/ToDo.dir/src/mainwindow.cpp.o	6e4fb43291859382
+2808	3246	1727453497999351788	ToDo	f1a5f72e5feddc19

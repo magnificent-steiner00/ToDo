@@ -1,0 +1,8 @@
+/home/krishna/Desktop/ToDo/build/CMakeFiles/ToDo.dir
+/home/krishna/Desktop/ToDo/build/CMakeFiles/edit_cache.dir
+/home/krishna/Desktop/ToDo/build/CMakeFiles/rebuild_cache.dir
+/home/krishna/Desktop/ToDo/build/CMakeFiles/list_install_components.dir
+/home/krishna/Desktop/ToDo/build/CMakeFiles/install.dir
+/home/krishna/Desktop/ToDo/build/CMakeFiles/install/local.dir
+/home/krishna/Desktop/ToDo/build/CMakeFiles/install/strip.dir
+/home/krishna/Desktop/ToDo/build/CMakeFiles/ToDo_autogen.dir
