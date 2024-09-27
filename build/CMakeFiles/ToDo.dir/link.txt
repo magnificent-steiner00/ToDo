@@ -1,1 +1,0 @@
-/bin/c++ CMakeFiles/ToDo.dir/ToDo_autogen/mocs_compilation.cpp.o CMakeFiles/ToDo.dir/src/main.cpp.o CMakeFiles/ToDo.dir/src/mainwindow.cpp.o -o ToDo  /usr/lib/x86_64-linux-gnu/libQt6Widgets.so.6.2.4 /usr/lib/x86_64-linux-gnu/libQt6Gui.so.6.2.4 /usr/lib/x86_64-linux-gnu/libQt6Core.so.6.2.4 /usr/lib/x86_64-linux-gnu/libGLX.so /usr/lib/x86_64-linux-gnu/libOpenGL.so 
