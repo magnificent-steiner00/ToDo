@@ -56,6 +56,26 @@ int dbms::insertTask(const QString &task,const QString &date){
     }
 }
 
+std::vector<std::string> dbms::getallTask(){
+
+    std::vector<std::string>taskData;
+
+    if(!db.isOpen()){
+        qDebug() << "Database is not opoen";
+        return taskData;
+    }
+
+    QSqlQuery query("SELECT id,task,date FROM tasks");
+
+    while(query.next()){
+        taskData.push_back(std::to_string(query.value(0).toInt()));
+        taskData.push_back(query.value(1).toString().toStdString());
+        taskData.push_back(query.value(2).toString().toStdString());
+    }
+
+    return taskData;
+}
+
 void dbms::deleteTask(int id){
     if(!db.isOpen()){
         qDebug() << "Database is not open";

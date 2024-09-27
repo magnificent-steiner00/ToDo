@@ -10,12 +10,50 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
 
     databaseManager =new dbms(this);
+
+    std::vector<std::string>tasks=databaseManager->getallTask();
+
+    for(int i=0;i<tasks.size();i+=3){
+        QListWidgetItem *task_item=new QListWidgetItem();
+
+        QWidget *task_widget=new QWidget();
+
+        QHBoxLayout *task_layout=new QHBoxLayout(task_widget);
+
+        QLabel *task_id=new QLabel(QString::fromStdString(tasks[i]));
+
+        QLabel *task=new QLabel(QString::fromStdString(tasks[i+1]));
+
+        QLabel *task_date=new QLabel(QString::fromStdString(tasks[i+2]));
+
+        QCheckBox *task_check=new QCheckBox();
+
+        QPushButton *task_remove=new QPushButton("Remove task");
+
+        task_layout->addWidget(task_id);
+        task_layout->addWidget(task);
+        task_layout->addWidget(task_date);
+        task_layout->addWidget(task_check);
+        task_layout->addWidget(task_remove);
+
+        task_item->setSizeHint(task_widget->sizeHint());
+        ui->TaskList->addItem(task_item);
+        ui->TaskList->setItemWidget(task_item,task_widget);
+
+
+        connect(task_remove,&QPushButton::clicked,this,[this,task_item,task_id](){
+            int id=std::stoi(task_id->text().toStdString());
+            delete ui->TaskList->takeItem(ui->TaskList->row(task_item));
+            databaseManager->deleteTask(id);
+        });
+
+    }
+
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
-    delete databaseManager;
 }
 
 
@@ -26,8 +64,6 @@ void MainWindow::on_addTaskButton_clicked()
     QWidget *task_widget=new QWidget();
 
     QHBoxLayout *task_layout=new QHBoxLayout(task_widget);
-
-    QLabel *task_id=new QLabel();
 
     QLabel *task=new QLabel(ui->addTaskInput->text());
 
@@ -43,7 +79,6 @@ void MainWindow::on_addTaskButton_clicked()
     QPushButton *task_remove=new QPushButton("Remove Task");
 
 
-    task_layout->addWidget(task_id);
     task_layout->addWidget(task);
     task_layout->addWidget(task_date);
     task_layout->addWidget(check_task);
@@ -55,7 +90,6 @@ void MainWindow::on_addTaskButton_clicked()
 
     int id=databaseManager->insertTask(task_text,date_task);
 
-    task_id->setText(QString::number(id));
 
 
     connect(task_remove,&QPushButton::clicked,this,[this,task_item,id](){
