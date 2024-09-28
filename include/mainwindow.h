@@ -31,6 +31,8 @@ private slots:
 private:
     Ui::MainWindow *ui;
     dbms *databaseManager;
+    void displayTasks();
+
 
 };
 #endif // MAINWINDOW_H

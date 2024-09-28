@@ -9,8 +9,22 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
+    QPixmap bg("../res/Untitled.png");
+    QPalette palette;
+    palette.setBrush(QPalette::Window,bg);
+    this->setPalette(palette);
+
     databaseManager =new dbms(this);
 
+    displayTasks();
+}
+
+MainWindow::~MainWindow()
+{
+    delete ui;
+}
+
+void MainWindow::displayTasks(){
     std::vector<std::string>tasks=databaseManager->getallTask();
 
     for(int i=0;i<tasks.size();i+=3){
@@ -30,7 +44,6 @@ MainWindow::MainWindow(QWidget *parent)
 
         QPushButton *task_remove=new QPushButton("Remove task");
 
-        task_layout->addWidget(task_id);
         task_layout->addWidget(task);
         task_layout->addWidget(task_date);
         task_layout->addWidget(task_check);
@@ -40,20 +53,14 @@ MainWindow::MainWindow(QWidget *parent)
         ui->TaskList->addItem(task_item);
         ui->TaskList->setItemWidget(task_item,task_widget);
 
+        int id=std::stoi(tasks[i]);
 
-        connect(task_remove,&QPushButton::clicked,this,[this,task_item,task_id](){
-            int id=std::stoi(task_id->text().toStdString());
+        connect(task_remove,&QPushButton::clicked,this,[this,task_item,task_id,id](){
             delete ui->TaskList->takeItem(ui->TaskList->row(task_item));
             databaseManager->deleteTask(id);
         });
 
     }
-
-}
-
-MainWindow::~MainWindow()
-{
-    delete ui;
 }
 
 
